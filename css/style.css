@@ -5,6 +5,40 @@ body{
 	margin:0;
 }
 
+nav{
+	position:fixed;
+	display: inline-block;
+	width:180px;
+	height:100%;
+	background-color: rgba(0,0,0,0.5);
+	left:-100%;
+	top:0;
+	z-index:999999;
+}
+
+nav li{
+	display: block;
+	width:100%;
+	height:50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom:1px solid rgba(255,255,255,0.3);
+}
+
+nav li a{
+	display: block;
+	width:100%;
+	height:100%;
+	color:rgba(255,255,255,0.9);
+	font-size:14px;
+	text-decoration: none;
+}
+
+nav li a:hover{
+	background-color: rgba(255,255,255,0.1);
+	font-size:16px;
+}
+
 .pre-load{
 	position:absolute;
 	width:100%;
@@ -157,7 +191,7 @@ body{
 }
 
 .nav{
-    position: absolute;
+    position: fixed;
     top: 30px;
     right: 30px;
     width: 32px;
@@ -165,6 +199,7 @@ body{
     border-top: 15px double;
     border-bottom: 5px solid;
     color:#fff;
+    z-index:999999;
 }
 
 .nav:hover{

@@ -1,8 +1,27 @@
 $(function(){
-	initPage();
-	$(".banner ul li").eq(0).addClass("banner-animate");
+		initPage();
+		$(".banner ul li").eq(0).addClass("banner-animate");
+
+		$(".nav").on("click",function(){
+			var obj = $("nav");
+			if(obj.hasClass("nav-animate")){
+				obj.animate({
+					left:"-100%"
+				},500,"swing",function(){
+					obj.removeClass("nav-animate");
+				});
+			}else{
+				obj.animate({
+					left:"0%"
+				},500,"swing",function(){
+					obj.addClass("nav-animate");
+				});
+			}
+		});
 });
 
+
+//初始化页面事件
 function initPage(){
 	var screenHeight = $(window).height();//获取窗口高度
 	var screenWidth = $(window).width();//获取窗口宽度
